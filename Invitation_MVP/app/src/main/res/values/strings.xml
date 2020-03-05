@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Invitation_MVP</string>
+    <string name="text1">My Events</string>
+    <string name="text2">-------------------------------------------------Log-------</string>
+    <string name="t_resultat">Create Events: XX</string>
+    <string name="but_craete">CREATE</string>
+    <string name="text_p2_1">Nom</string>
+    <string name="text_p2_2">Descripcio</string>
+    <string name="text_p2_3">Data:</string>
+    <string name="but_data">DATA</string>
+    <string name="but_cancel">Cancel</string>
+    <string name="but_create_pg2">Create</string>
+    <string name="but_create_pg3">Accept</string>
+
+</resources>
