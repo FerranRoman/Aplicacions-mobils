@@ -20,30 +20,17 @@ public class Event {
 
 
 
+    @Override
+    @NonNull
     public String toString(){
-        return "El event es dirà "+ name + ", consistirà en "+ description + " i serà el dia " + data;
+        return "El event es dirà "+ name + ", consistirà en "+ description
+                + " i serà el dia " + data;
     }
 
-    public String getName() {
-        return name;
-    }
+
+    // We must delete all method we not use
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-    public String getData() {
-        return data;
-    }
-
-    public void setData(String data) {
-        this.data = data;
     }
 }
