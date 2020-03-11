@@ -11,5 +11,5 @@
     <string name="but_cancel">Cancel</string>
     <string name="but_create_pg2">Create</string>
     <string name="but_create_pg3">Accept</string>
-
+    <string name="counter">contador</string>
 </resources>

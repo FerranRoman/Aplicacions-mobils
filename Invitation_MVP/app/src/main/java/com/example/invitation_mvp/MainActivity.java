@@ -9,51 +9,47 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView NumEvent;
+    private String TAG = "Main Activity";
+
     private int cont = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        Log.d(TAG, "Starting onCreate...");
 
         Bundle extres = getIntent().getExtras();
         assert extres != null; //assegurat que no es null lo que passes
         try{
-            cont = cont + extres.getInt("contador");
 
-            NumEvent = (TextView) findViewById(R.id.textNumEvent);
+            cont = cont + extres.getInt("contador");
+            Log.d(TAG, "cont = " + cont);
+
+            TextView numEvent = findViewById(R.id.textNumEvent);
 
             String resultat = "Create Events: " + cont;
 
-            NumEvent.setText(resultat);
+            numEvent.setText(resultat);
 
         }catch(Exception e){
-
+            Log.d(TAG, "Exption in onCreate... check " + e.getMessage());
         }
-
-        /*NumEvent = (TextView) findViewById(R.id.textNumEvent);
-
-        String resultat = "Create Events: " + cont;
-
-        NumEvent.setText(resultat);*/
-
-
-        //contador = contador + 1;
-        //NumEvent.setText(resultat);
-        //no funciona el contador
-        //esta mal fet el contador pk si tiro atras augmentara
-        //pero no puc passar los datos de la 3a pk sino la primera vegada k lo obris peta
-
 
 
     }
-    public void Siguiente (View view) {
+
+    // Functions and variables names must be in camelCase
+    // Class names must be start with capital letter
+    public void siguiente(View view) {
+        Log.d(TAG, "Button pressed function (siguient)... ");
+
         Intent siguiente = new Intent(this, CreaInvitation.class);
 
-        siguiente.putExtra("contador", cont);
+        // We should not hardcore the string message in text
+        siguiente.putExtra(getResources().getString(R.string.counter), cont);
 
+        Log.d(TAG, "Starting CrearInvitation class... ");
         startActivity(siguiente);
     }
 
